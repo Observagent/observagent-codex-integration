@@ -1,7 +1,7 @@
 # Observagent integration for Codex CLI
 
 This folder contains the configuration template users need to send Codex
-OpenTelemetry logs to Observagent.
+OpenTelemetry logs, metrics, and traces to Observagent.
 
 ## Install
 
@@ -12,6 +12,8 @@ OpenTelemetry logs to Observagent.
 4. Merge the `[otel]` settings into the existing user-level configuration.
    Do not overwrite unrelated settings or create a second `[otel]` table.
 5. Restart Codex and create a new test session.
+6. Verify logs, metrics, and traces separately in Observagent. Exporters flush
+   asynchronously, so allow a short delay after completing the session.
 
 Telemetry routing settings are ignored in a project-local
 `.codex/config.toml`, so this configuration must be added to the user-level
