@@ -9,3 +9,15 @@ exporter = { otlp-http = {
   protocol = "binary",
   headers = { Authorization = "Bearer YOUR_OBSERVAGENT_PROJECT_KEY" }
 }}
+
+metrics_exporter = { otlp-http = {
+  endpoint = "https://dashboard.observagent.cloud/v1/metrics",
+  protocol = "binary",
+  headers = { Authorization = "Bearer YOUR_OBSERVAGENT_PROJECT_KEY" }
+}}
+
+trace_exporter = { otlp-http = {
+  endpoint = "https://dashboard.observagent.cloud/v1/traces",
+  protocol = "binary",
+  headers = { Authorization = "Bearer YOUR_OBSERVAGENT_PROJECT_KEY" }
+}}
