@@ -1,0 +1,11 @@
+# Merge this block into the user's ~/.codex/config.toml.
+# Do not replace unrelated settings that are already in that file.
+
+[otel]
+environment = "production"
+log_user_prompt = false
+exporter = { otlp-http = {
+  endpoint = "https://dashboard.observagent.cloud/v1/logs",
+  protocol = "binary",
+  headers = { Authorization = "Bearer YOUR_OBSERVAGENT_PROJECT_KEY" }
+}}
